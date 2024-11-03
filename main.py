@@ -232,7 +232,7 @@ class Monitor:
             self.agitation_begin = 0
             if self.idle_begin == 0:
                 self.idle_begin = time.time()
-            if time.time() - self.idle_begin > 5:
+            if time.time() - self.idle_begin > 10:
                 await self.bye()
             self.led.off()
             return
